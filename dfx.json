@@ -1,0 +1,14 @@
+{
+    "canisters": {
+      "icrc1-ledger": {
+        "type": "custom",
+        "wasm": "ic-icrc1-ledger.wasm",
+        "candid": "icrc1.did"
+      }
+    },
+    "networks": {
+        "local": {
+        "bind": "127.0.0.1:8000"
+      }
+  }
+  }
