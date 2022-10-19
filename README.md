@@ -1,27 +1,27 @@
-# 概要
+## 概要
 
 ICRC-1 Fungible Token Standard を実装した Ledger を使用して、ローカルレプリカをセットアップする。
 
-# ファイル構成
+##ファイル構成
 
-## icrc1.did
+`icrc1.did`
 
 Ledger キャニスターの API。
 
-## dfx.json
+`dfx.json`
 
 dfx SDK で使用するキャニスター設定ファイル。
 
-# 手順
+## 手順
 
-## ステップ 0: 準備
+### ステップ 0: 準備
 
 ```bash
 mkdir icrc1_ledger_test
 cd icrc1_ledger_test
 ```
 
-## ステップ 1: Ledger のダウンロード
+### ステップ 1: Ledger のダウンロード
 
 以下は、2022/10/19 現在の最新バージョン（コミットログ）。
 最新版は`dfinity/ic`のコミットログから取得可能。
@@ -54,7 +54,7 @@ ls -sh1 *
 
 curl コマンドをコピーして実行する際、`curl -o icrc1.did https://raw.githubusercontent.com/dfinity/ic/$\{IC_VERSION\}/rs/rosetta-api/icrc1/ledger/icrc1.did`のように、${IC_VERSION}にエスケープが入ってしまうと、ファイルのダウンロードに失敗するので注意（ダウンロード自体は実行されるが、ファイルの中身がエラー）
 
-## ステップ 2: レプリカを起動する
+### ステップ 2: レプリカを起動する
 
 まず、dfx.json ファイルを作成する。
 
@@ -123,7 +123,7 @@ $ dfx deploy icrc1-ledger --argument "(record {
 },)"
 ```
 
-## ステップ 3 : トークンをミントする
+### ステップ 3 : トークンをミントする
 
 `icrc1_transfer`で転送、`icrc1_balance_of`でユーザーの残高確認ができる。
 
@@ -140,7 +140,7 @@ $ dfx canister call icrc1-ledger icrc1_balance_of '(record { owner=principal "PR
 (1_000_000 : nat64)
 ```
 
-# 参照
+## 参照
 
 https://github.com/dfinity/ic/tree/master/rs/rosetta-api/icrc1/ledger
 
