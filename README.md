@@ -2,7 +2,7 @@
 
 ICRC-1 Fungible Token Standard を実装した Ledger を使用して、ローカルレプリカをセットアップする。
 
-##ファイル構成
+## ファイル構成
 
 `icrc1.did`
 
