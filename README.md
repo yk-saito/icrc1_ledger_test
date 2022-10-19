@@ -143,5 +143,3 @@ $ dfx canister call icrc1-ledger icrc1_balance_of '(record { owner=principal "PR
 ## 参照
 
 https://github.com/dfinity/ic/tree/master/rs/rosetta-api/icrc1/ledger
-
-最後に、Ledger をデプロイする。
